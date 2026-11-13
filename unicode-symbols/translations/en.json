@@ -1,0 +1,35 @@
+{
+  "title": "Unicode & Symbols",
+  "notify": {
+    "copied": "{name} copied to clipboard"
+  },
+  "no_matches": "No matches",
+  "unicode": {
+    "hint": "Type a name, U+2192, or paste a character",
+    "hint_subtitle": "Searches all named Unicode characters; Enter copies",
+    "popular": "Popular",
+    "unassigned": "Unassigned code point",
+    "no_matches_hint": "Try a Unicode name, a code point like U+2192, or paste a character",
+    "data_error": "Character data unavailable",
+    "data_error_hint": "Reinstall the plugin: data/unicode.tsv is missing or unreadable",
+    "loading": "Loading Unicode data",
+    "loading_hint": "One moment; results appear as soon as the table is ready"
+  },
+  "symb": {
+    "no_matches_hint": "Try a symbol name or a group such as arrows or currency",
+    "data_error": "Symbol data unavailable",
+    "data_error_hint": "Reinstall the plugin: data/symbols.tsv is missing or unreadable",
+    "loading": "Loading symbol data",
+    "loading_hint": "One moment; results appear as soon as the table is ready"
+  },
+  "settings": {
+    "notify_on_copy": {
+      "label": "Notify when copied",
+      "description": "Show a notification after a character is copied to the clipboard"
+    },
+    "max_results": {
+      "label": "Maximum results",
+      "description": "How many matches the Unicode and symbol providers show for a search"
+    }
+  }
+}

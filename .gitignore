@@ -1,0 +1,2 @@
+# Cached Unicode Character Database downloads (tools/build_unicode_data.py).
+tools/.ucd-cache/

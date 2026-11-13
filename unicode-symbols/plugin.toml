@@ -1,0 +1,117 @@
+# Unicode & Symbols - two launcher providers backed by bundled Unicode data.
+#
+#   /unicode  searches every named Unicode character by name, code point, or
+#             by pasting the character itself
+#   /symb     browses a curated set of common symbols, grouped by category
+#
+# The tables under data/ are generated from the Unicode Character Database by
+# tools/build_unicode_data.py at the repository root; both providers read them
+# with noctalia.readFile(), so no network access or external tool is needed.
+# plugin_api 22 is required for require("./lib/util.luau").
+
+id = "martianingreen/unicode-symbols"
+name = "Unicode & Symbols"
+version = "1.0.0"
+plugin_api = 23
+author = "MartianInGreen"
+license = "MIT"
+dependencies = []
+tags = ["launcher", "utility"]
+icon = "letter-case"
+description = "Search Unicode characters by name or code point, and copy common math, arrow, and other symbols."
+
+
+[[setting]]
+key = "notify_on_copy"
+type = "bool"
+label_key = "settings.notify_on_copy.label"
+description_key = "settings.notify_on_copy.description"
+default = false
+
+
+[[setting]]
+key = "max_results"
+type = "int"
+label_key = "settings.max_results.label"
+description_key = "settings.max_results.description"
+default = 50
+min = 5
+max = 200
+
+
+[[launcher_provider]]
+id = "unicode"
+entry = "unicode.luau"
+prefix = "unicode"
+glyph = "letter-case"
+include_in_global_search = false
+
+
+[[launcher_provider]]
+id = "symb"
+entry = "symb.luau"
+prefix = "symb"
+glyph = "math-symbols"
+include_in_global_search = false
+
+  # The filter bar labels must match the `group` field of the rows in
+  # data/symbols.tsv; tests/test_data.py enforces the pair.
+  [[launcher_provider.category]]
+  label = "Arrows"
+  glyph = "arrow-narrow-right"
+
+  [[launcher_provider.category]]
+  label = "Math"
+  glyph = "math"
+
+  [[launcher_provider.category]]
+  label = "Sets & Logic"
+  glyph = "math-not"
+
+  [[launcher_provider.category]]
+  label = "Geometry"
+  glyph = "geometry"
+
+  [[launcher_provider.category]]
+  label = "Superscript & Subscript"
+  glyph = "superscript"
+
+  [[launcher_provider.category]]
+  label = "Fractions"
+  glyph = "math-1-divide-2"
+
+  [[launcher_provider.category]]
+  label = "Greek"
+  glyph = "letter-case"
+
+  [[launcher_provider.category]]
+  label = "Currency"
+  glyph = "currency"
+
+  [[launcher_provider.category]]
+  label = "Punctuation"
+  glyph = "typography"
+
+  [[launcher_provider.category]]
+  label = "Brackets"
+  glyph = "brackets"
+
+  [[launcher_provider.category]]
+  label = "Shapes"
+  glyph = "triangle-square-circle"
+
+  [[launcher_provider.category]]
+  label = "Signs"
+  glyph = "check"
+
+  [[launcher_provider.category]]
+  label = "Keys"
+  glyph = "keyboard"
+
+  [[launcher_provider.category]]
+  label = "Music"
+  glyph = "music"
+
+  [[launcher_provider.category]]
+  label = "Letterlike"
+  glyph = "math-function"

@@ -1,0 +1,17 @@
+# Plugin index for the Daylight source repository.
+#
+# Noctalia reads this before cloning so the plugin store can list (and
+# compatibility-check) what the repository offers.
+
+[[plugin]]
+id = "martianingreen/unicode-symbols"
+name = "Unicode & Symbols"
+version = "1.0.0"
+author = "MartianInGreen"
+license = "MIT"
+icon = "letter-case"
+description = "Search Unicode characters by name or code point, and copy common math, arrow, and other symbols."
+deprecated = false
+plugin_api = 23
+tags = ["launcher", "utility"]
+dependencies = []
